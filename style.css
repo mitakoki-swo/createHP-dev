@@ -143,7 +143,8 @@ header {
         padding: 10px 0;
     }
 
-    .container {
+    /* 変更点: 下記の2つのプロパティを削除 */
+    /* .container {
         flex-direction: column;
         align-items: flex-start;
     }
@@ -152,8 +153,9 @@ header {
         flex-direction: column;
         width: 100%;
         align-items: flex-start;
-    }
+    } */
 
+    
     .menu li {
         margin-right: 0;
         margin-bottom: 10px;
@@ -188,7 +190,6 @@ header {
     }
 
     .bm-text p {
-        font-size: 1vw;
+        font-size: 2vw;
     }
 }
-
