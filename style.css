@@ -1,7 +1,9 @@
+/* 全ての要素にボックスモデルを適用 */
 * {
-    box-sizing: border-box; /* すべての要素にボックスモデルを適用 */
+    box-sizing: border-box;
 }
 
+/* 基本のスタイル */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -9,6 +11,7 @@ body {
     overflow-x: hidden; /* 横スクロールを防止 */
 }
 
+/* ヘッダーのスタイル */
 header {
     background-color: #1993b2;
     color: #fff;
@@ -27,11 +30,8 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
-
     overflow: hidden; /* 横スクロールを防止 */
-
     position: relative;
-
 }
 
 .logo {
@@ -48,7 +48,7 @@ header {
     margin: 0;
     padding: 0 8px;
     display: flex;
-    flex-wrap: nowrap; /* 変更点: 折り返しを無効にする */
+    flex-wrap: nowrap; /* 折り返しを無効にする */
     overflow-x: auto; /* 横スクロールを許可 */
 }
 
@@ -72,6 +72,7 @@ header {
     white-space: nowrap;
 }
 
+/* コンテンツエリアのスタイル */
 .bm-body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -84,15 +85,18 @@ header {
     background-color: #f0f0f0;
 }
 
+.body-merit {
+    width: 100%; /* 横幅を100%に設定 */
+}
+
 .bm-container {
     display: flex;
     align-items: center;
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 1200px;
-    margin: 20px auto; /* 中央揃え */
+    width: 100%; /* 横幅を100%に設定 */
+    margin: 20px 0; /* 左右のマージンを削除し、上下のマージンを20pxに設定 */
 }
 
 .bm-image1, .bm-image2 {
@@ -128,7 +132,7 @@ header {
     }
 
     .bm-text p {
-        font-size: 2pw;
+        font-size: 2vw;
     }
 }
 
@@ -141,7 +145,7 @@ header {
     .bm-image1, .bm-image2 {
         margin-right: 0;
         margin-bottom: 20px;
-        width: 100%; /* 画像の幅を100%に設定 */
+        width: 90%; /* 画像の幅を100%に設定 */
     }
 
     .bm-text {
@@ -175,7 +179,7 @@ header {
 
 @media (max-width: 480px) {
     .right-form a {
-        font-size: 14px;
+        font-size: 3vw;
     }
 
     .menu li a {
@@ -191,15 +195,13 @@ header {
     }
 }
 
+/* コンテンツ全体のスタイル */
 .content {
     margin-top: 120px; /* 例：ヘッダーの下に20pxの余白を作成 */
 }
 
-
-
-
-#title{
-    background-image:url(image/title_img1.jpg);
+#title {
+    background-image: url(image/title_img1.jpg);
     background-position: center;
     background-size: cover;
     height: 750px;
@@ -209,42 +211,44 @@ header {
     margin-bottom: 90px;
     overflow: hidden;
     animation: fadeIn 4s ease-in-out forwards;
-   
 }
 
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
-  
 }
 
 #title::before {
     content: '';
-    width:100% ;
+    width: 100%;
     height: 100%;
     background-color: #000;
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     opacity: 0.2;
     z-index: 1;
 }
-.title_inner{
+
+.title_inner {
     z-index: 2;
     color: #fff;
     width: 100%;
     text-align: center;
 }
-.title_inner h1{
+
+.title_inner h1 {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 40px;
 }
-.title_inner p{
+
+.title_inner p {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 30px;
 }
+
 .button_bt {
     background-color: #000;
     color: #ffffff;
@@ -259,4 +263,3 @@ header {
 .button_bt:hover {
     background-color: #2f2b2b;
 }
-
