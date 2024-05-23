@@ -14,7 +14,7 @@ body {
 
 /* ヘッダーのスタイル */
 header {
-    background-color: #1993b2;
+    background-color: #2ac7c7;
     color: #fff;
     padding: 20px 0;
     position: fixed;
@@ -264,6 +264,60 @@ header {
 
 .button_bt:hover {
     background-color: #2f2b2b;
+
+}
+
+.detail-melit{
+    margin-bottom: 45px;
+}
+.detail-melit .container{
+    max-width:  1080%;;
+    margin: 0 auto;  
+}
+.section-header{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+}
+.detail-melit .row{
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+z-index: 2;
+position: relative;
+}
+.detail-melit .col{
+ background-color: #2ac7c7;   
+width: 32%;
+color: #fff;
+padding: 20px;
+}
+.detail-melit img{
+    margin-bottom: 16px;
+}
+.detail-melit h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.detail-melit hr{
+    border: solid 2px #2ac7c7;
+    margin-bottom: 16px;   
+}
+.detail-melit p{
+    font-size: 20px;
+    line-height: 1.5;
+}
+.detail-melit hr{
+    border:  solid 3px #fff;
+    margin-bottom: 12px;
+}
+@media screen and (max-width: 767px){
+    .detail-melit .col{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
 }
 
 /* 下記からbody-ex関係のCSSを記述 */
