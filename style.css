@@ -1,9 +1,17 @@
+/* 全ての要素にボックスモデルを適用 */
+* {
+    box-sizing: border-box;
+}
+
+/* 基本のスタイル */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     font-size: 10px;
+    overflow-x: hidden; /* 横スクロールを防止 */
 }
 
+/* ヘッダーのスタイル */
 header {
     background-color: #2ac7c7;
     color: #fff;
@@ -18,25 +26,21 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
+    overflow: hidden; /* 横スクロールを防止 */
     position: relative;
 }
 
-.logo{
-    max-width: 100px; /* 最大幅 */
-    min-width: 70px; /* 最小幅 */
+.logo {
+    max-width: 100px;
+    min-width: 70px;
 }
 
-.logo img{
-    width: 100%
-}
-
-.logo a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
+.logo img {
+    width: 100%;
 }
 
 .menu {
@@ -44,14 +48,14 @@ header {
     margin: 0;
     padding: 0 8px;
     display: flex;
-    
+    flex-wrap: nowrap; /* 折り返しを無効にする */
+    overflow-x: auto; /* 横スクロールを許可 */
 }
 
 .menu li {
     margin-right: 30px;
     font-size: 5px;
 }
-
 
 .menu li:last-child {
     margin-right: 0;
@@ -68,15 +72,136 @@ header {
     white-space: nowrap;
 }
 
+/* コンテンツエリアのスタイル */
+.bm-body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.body-merit {
+    width: 100%; /* 横幅を100%に設定 */
+}
+
+.bm-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* 横幅を100%に設定 */
+    margin: 20px 0; /* 左右のマージンを削除し、上下のマージンを20pxに設定 */
+}
+
+.bm-image1, .bm-image2 {
+    width: 48%; /* 画像の幅を .bm-container の 48% に設定 */
+    max-width: 100%; /* 最大幅を100%に設定 */
+    margin-right: 20px;
+}
+
+.bm-text {
+    max-width: 650px;
+    width: 52%;
+    margin: auto;
+}
+
+.bm-text h1 {
+    margin-top: 0;
+    font-size: 2vw; /* 画面幅に対する相対的な大きさ */
+}
+
+.bm-text p {
+    margin: 0;
+    font-size: 1vw;
+}
+
+/* 画面サイズに応じたスタイルの調整 */
+@media (max-width: 1024px) {
+    .bm-container {
+        padding: 10px;
+    }
+    
+    .bm-text h1 {
+        font-size: 3vw;
+    }
+
+    .bm-text p {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .bm-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bm-image1, .bm-image2 {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 90%; /* 画像の幅を100%に設定 */
+    }
+
+    .bm-text {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    header {
+        padding: 10px 0;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .right-form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bm-text h1 {
+        font-size: 3vw; /* 画面幅に対する相対的な大きさ */
+    }
+
+    .bm-text p {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .right-form a {
+        font-size: 3vw;
+    }
+
+    .menu li a {
+        font-size: 14px;
+    }
+
+    .bm-text h1 {
+        font-size: 3vw;
+    }
+
+    .bm-text p {
+        font-size: 2vw;
+    }
+}
+
+/* コンテンツ全体のスタイル */
 .content {
     margin-top: 120px; /* 例：ヘッダーの下に20pxの余白を作成 */
 }
 
-
-
-
-#title{
-    background-image:url(image/title_img1.jpg);
+#title {
+    background-image: url(image/title_img1.jpg);
     background-position: center;
     background-size: cover;
     height: 750px;
@@ -86,42 +211,44 @@ header {
     margin-bottom: 90px;
     overflow: hidden;
     animation: fadeIn 4s ease-in-out forwards;
-   
 }
 
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
-  
 }
 
 #title::before {
     content: '';
-    width:100% ;
+    width: 100%;
     height: 100%;
     background-color: #000;
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     opacity: 0.2;
     z-index: 1;
 }
-.title_inner{
+
+.title_inner {
     z-index: 2;
     color: #fff;
     width: 100%;
     text-align: center;
 }
-.title_inner h1{
+
+.title_inner h1 {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 40px;
 }
-.title_inner p{
+
+.title_inner p {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 30px;
 }
+
 .button_bt {
     background-color: #000;
     color: #ffffff;
@@ -135,21 +262,53 @@ header {
 
 .button_bt:hover {
     background-color: #2f2b2b;
+
 }
 
 .detail-melit{
     margin-bottom: 45px;
 }
 .detail-melit .container{
-    max: width 1080%;;
+    max-width:  1080%;;
     margin: 0 auto;
+    
 }
 .detail-melit .row{
  display: flex;
  justify-content: space-between;
  flex-wrap: wrap;
-
+z-index: 2;
+position: relative;
 }
 .detail-melit .col{
- background-color: #fff;   
+ background-color: #2ac7c7;   
+width: 32%;
+color: #fff;
+padding: 20px;
+}
+.detail-melit img{
+    margin-bottom: 16px;
+}
+.detail-melit h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.detail-melit hr{
+    border: solid 2px #2ac7c7;
+    margin-bottom: 16px;   
+}
+.detail-melit p{
+    font-size: 20px;
+    line-height: 1.5;
+}
+.detail-melit hr{
+    border:  solid 3px #fff;
+    margin-bottom: 12px;
+}
+@media screen and (max-width: 767px){
+    .detail-melit .col{
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
