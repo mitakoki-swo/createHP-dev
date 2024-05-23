@@ -73,22 +73,39 @@ header {
   font-size: clamp(8px, 2.5vw, 18px);
   white-space: nowrap;
 }
+
 .service_subject {
   text-align: center;
-  font-size: 25px;
+  font-size: 35px;
+  margin-bottom: 60px;
 }
 
 .service_sub-title {
   display: flex;
-  background-color: #1993b2;
 }
 
-.service-1,
-.service-2,
-.service-3,
-.service-4 {
-  font-size: 15px;
+.service-1{
+  font-size: 18px;
   margin: 40px;
+  background-color: #2ac7c7;
+}
+
+.service-2{
+  font-size: 18px;
+  margin: 40px;
+  background-color: #2ac7c7;
+}
+
+.service-3{
+  font-size: 18px;
+  margin: 40px;
+  background-color: #2ac7c7;
+}
+
+.service-4 {
+  font-size: 18px;
+  margin: 40px;
+  background-color: #2ac7c7;
 }
 
 .img_service-zoom-1,
@@ -97,57 +114,55 @@ header {
 .img_service-zoom-4 {
   height: 100px;
   width: 100px;
-  background-color: #1993b2;
+  align-items:end;
+}
+
+.merit_service {
+  background-color: #007bff;
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 60px;
+  margin-top: 100px;
 }
 
 .merit_title {
   display: flex;
-}
-
-.merit_service {
-  text-align: center;
-  font-size: 30px;
+  justify-content: space-between; /* 左右に均等に配置 */
+  align-items: center; /* 縦方向の中央揃え */
+  padding: 0 50px; /* 左右のパディングを追加して中央揃えを補助 */
   margin-bottom: 20px;
-  margin-top: 100px; 
+  gap: 20px;
 }
 
-.merit_service1 {
-  font-size: 20px;
-  margin-left: 50px;
-  margin-right: 260px;
-}
-
+.merit_service1,
 .merit_service2 {
-  font-size: 20px;
+  font-size: 30px;
+  text-align: center;
+  margin: 0 20px;
 }
 
 .merit_service3 {
-  font-size: 20px;
+  font-size: 30px;
   text-align: center; /* これを追加して親要素を中央揃えに */
 }
 
 .merit_images_container {
-  display: flex;
-  justify-content: center; /* 画像を水平中央揃え */
-  gap: 20px; /* 画像間のスペース */
+  display: flex; /* Flexboxを使用 */
+  justify-content: space-between; /* 左右に均等に配置 */
 }
 
-.img_merit-1 {
-  height: 300px;
-  width: 400px;
-}
-
+.img_merit-1,
 .img_merit-2 {
-  text-align: center;
-  height: 300px;
-  width: 400px;
+  height: 400px;
+  width: 600px;
+  margin: 0 30px;
 }
 
 .img_merit-3 {
   display: block;
   margin: auto;
-  height: 300px;
-  width: 500px;
+  height: 400px;
+  width: 600px;
 }
 /* コンテンツエリアのスタイル */
 .bm-body {
@@ -510,64 +525,62 @@ footer {
 }
 
 @media (min-width: 768px) {
-
   .footer-sections {
     flex-direction: row;
   }
 }
 
-    .footer-sections {
-        flex-direction: row;
-    }
+.footer-sections {
+  flex-direction: row;
+}
 
 /* 下記ボタン作成 */
 
-.create-btn{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f4f4f4;
+.create-btn {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
 }
 
 .btn-contact-section {
-    width: 90%; /* セクションが画面幅の90%を占める */
-    max-width: 1600px; /* 最大幅を設定 */
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+  width: 90%; /* セクションが画面幅の90%を占める */
+  max-width: 1600px; /* 最大幅を設定 */
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn-contact-section p {
-    font-size: 18px;
-    margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .btn-buttons {
-    display: flex;
-    justify-content: space-between; /* ボタン間のスペースを均等に配置 */
-    gap: 10px; /* ボタン間の間隔 */
+  display: flex;
+  justify-content: space-between; /* ボタン間のスペースを均等に配置 */
+  gap: 10px; /* ボタン間の間隔 */
 }
 
 .btn-contact-button {
-    flex: 1; /* 各ボタンが同じ幅を持つように設定 */
-    padding: 10px 0; /* 上下のパディングを設定 */
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s ease;
+  flex: 1; /* 各ボタンが同じ幅を持つように設定 */
+  padding: 10px 0; /* 上下のパディングを設定 */
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 .btn-contact-button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
