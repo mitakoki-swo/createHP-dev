@@ -270,9 +270,9 @@ header {
 }
 .detail-melit .container{
     max-width:  1080%;;
-    margin: 0 auto;
-    
+    margin: 0 auto;  
 }
+
 .detail-melit .row{
  display: flex;
  justify-content: space-between;
