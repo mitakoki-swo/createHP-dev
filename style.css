@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     font-size: 10px;
     overflow-x: hidden; /* 横スクロールを防止 */
+    background: beige;
 }
 
 /* ヘッダーのスタイル */
@@ -20,6 +21,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
+    opacity: 0.9;
 }
 
 .container {
@@ -262,4 +264,55 @@ header {
 
 .button_bt:hover {
     background-color: #2f2b2b;
+}
+
+/* 下記からbody-ex関係のCSSを記述 */
+.popular__container {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.popular__item {
+    flex: 0 0 calc(97% / 4 - 5px); /* 画面の95%を２つの画像で占め、隙間を5px空ける */
+    margin: 5px; /* 隙間の設定 */
+    opacity: 0; /* 初期状態で非表示にする */
+    animation: fadeInLeft 1s forwards;
+}
+
+/* 各画像に異なるアニメーション遅延を設定 */
+.popular__item:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.popular__item:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.popular__item:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.popular__item:nth-child(4) {
+    animation-delay: 2s;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.popular__img img {
+    width: 100%;
+    height: auto;
+}
+
+.ex-title-h1 {
+    text-align: center;
+    font-size: 3vw;
 }
