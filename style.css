@@ -73,7 +73,70 @@ header {
     font-size: clamp(8px, 2.5vw, 18px);
     white-space: nowrap;
 }
+.service_subject {
+  text-align: center;
+  font-size: 25px;
+}
 
+.service_sub-title {
+  display: flex;
+  background-color: #1993b2;
+}
+
+.service-1, .service-2, .service-3, .service-4 {
+  font-size: 15px;
+  margin: 40px;
+}
+
+.img_service-zoom-1, .img_service-zoom-2, .img_service-zoom-3, .img_service-zoom-4 {
+  height: 100px;
+  width: 100px;
+  background-color: #1993b2;
+}
+
+.merit_title {
+  display: flex;
+ 
+}
+
+.merit_service {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.merit_service1 {
+  font-size: 20px;
+  margin-left:50px;
+  margin-right: 260px;
+}
+
+.merit_service2 {
+  font-size: 20px;
+}
+
+.merit_service3 {
+  text-align: center; /* これを追加して親要素を中央揃えに */
+}
+
+
+.img_merit-1{
+  height:300px;
+  width:400px;
+}
+
+.img_merit-2{
+  text-align: center;
+  height:300px;
+  width:400px;
+}
+
+.img_merit-3{
+  display: block;
+  margin:auto;
+  height:300px;
+  width:500px;
+}
 /* コンテンツエリアのスタイル */
 .bm-body {
     font-family: Arial, sans-serif;
