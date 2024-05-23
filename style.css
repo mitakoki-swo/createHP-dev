@@ -75,7 +75,7 @@ header {
 
 
 
-#hero{
+#title{
     background-image:url(image/title_img1.jpg);
     background-position: center;
     background-size: cover;
@@ -95,7 +95,7 @@ header {
   
 }
 
-#hero::before {
+#title::before {
     content: '';
     width:100% ;
     height: 100%;
@@ -106,23 +106,23 @@ header {
     opacity: 0.2;
     z-index: 1;
 }
-.hero_inner{
+.title_inner{
     z-index: 2;
     color: #fff;
     width: 100%;
     text-align: center;
 }
-.hero_inner h1{
+.title_inner h1{
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 40px;
 }
-.hero_inner p{
+.title_inner p{
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 30px;
 }
-button {
+.button_bt {
     background-color: #000;
     color: #ffffff;
     padding: 10px 20px;
@@ -130,9 +130,10 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 12px;
+    margin-top: 50px;
 }
 
-button:hover {
+.button_bt:hover {
     background-color: #2f2b2b;
 }
 
