@@ -435,3 +435,54 @@ footer {
         flex-direction: row;
     }
 }
+
+/* 下記ボタン作成 */
+
+.create-btn{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+.btn-contact-section {
+    width: 90%; /* セクションが画面幅の90%を占める */
+    max-width: 1600px; /* 最大幅を設定 */
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.btn-contact-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn-buttons {
+    display: flex;
+    justify-content: space-between; /* ボタン間のスペースを均等に配置 */
+    gap: 10px; /* ボタン間の間隔 */
+}
+
+.btn-contact-button {
+    flex: 1; /* 各ボタンが同じ幅を持つように設定 */
+    padding: 10px 0; /* 上下のパディングを設定 */
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact-button:hover {
+    background-color: #0056b3;
+}
